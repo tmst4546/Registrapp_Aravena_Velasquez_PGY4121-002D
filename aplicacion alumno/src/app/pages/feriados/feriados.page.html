@@ -1,0 +1,45 @@
+<!--INICIO DE HEADER-->
+<ion-header>
+  <ion-toolbar>
+
+    <!--MENU SIDE HAMBURGUESA, MUESTRA CADA ELEMENTO DE ARRAY LLAMADO DESDE APP.COMPONENT.HTML-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+    <!--LOGO Y NOMBRE DE LA APP, BOTON DE LOGIN Y LOGOUT-->
+    <ion-title slot="start" class="colorLogo"><ion-icon name="school-sharp"></ion-icon> RegistrAPP</ion-title>
+    
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">login</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-in-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">logout</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-out-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+<!--FINAL DE HEADER-->
+
+<ion-content>
+  <br>
+  <ion-title class="centrarTexto tamanoTitulo"><b>FERIADOS DEL </b></ion-title>
+  <ion-title class="centrarTexto tamanoTitulo"><b>AÑO</b></ion-title>
+  <br>
+  <ion-card  *ngFor="let n of noticias">
+    <ion-card-header>
+      <ion-card-subtitle class="colorFecha">Fecha: {{ n.date }}</ion-card-subtitle>
+      <ion-card-title class="colorNombre">Titulo: {{ n.title }}</ion-card-title>
+      <p>Tipo: {{ n.type }}</p>
+      <p>Extra: {{ n.extra }}</p>
+    </ion-card-header>
+    
+  </ion-card>
+</ion-content>

@@ -1,0 +1,28 @@
+<ion-app><!--INICIO DE MENU LATERAL-->
+  <!--IDENTIFICADOR UNICO AL MENU MENUID="MAIN-MENU":PARA PODER COLOCARLOS EN LOS PAGES.-->
+  <!--CONTENT-ID ESTABLECE UN VINCULO ENTRE EL MENU Y EL CONTENIDO, PARA ASI QUE SE AJUSTE EL ESPACIO DEL MENÚ DE MANERA CORRECTA-->
+  <ion-menu menuId="main-menu" content-id="main"> 
+    <ion-header class="posicionHeader">
+      <ion-toolbar>
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+
+        <ion-menu-toggle> <!--Esto es para que cierre el menu al apretar alguno, funciona como un swich-->
+          <!--NGFOR PARA CREAR BUCLE, SE DEFINE C DONDE REPRESENTA CADA ELEMENTO EN LA LISTA LLAMADA COMPONENTES-->
+          <!--ROUTERLINK ES PARA REDIRIGIR A URL DEFINIDO EN APP.COMPONENT.TS DE CADA ELEMENTO, NAME PARA MOSTRAR NOMBRE DEFINIDO-->
+          <ion-item *ngFor="let c of componentes" [routerLink]="c.redirecTo" detail="true">
+            <ion-icon [name]="c.icon" slot="start" class="colorIcon"></ion-icon>
+            <ion-text>{{ c.name }} </ion-text>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+
+    </ion-content>
+  </ion-menu>
+
+  <!--ACÁ SE INDICA DONDE DEBE CARGARSE EL CONTENIDO DE LAS PAGINAS/VISTAS DE LA APP, ID=MAIN ES PARA REFERENCIARLO DESDE OTRAS PARTES DEL CODIGO-->
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

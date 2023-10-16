@@ -1,0 +1,95 @@
+<!--INICIO DE HEADER-->
+<ion-header>
+  <ion-toolbar>
+
+    <!--MENU SIDE HAMBURGUESA, MUESTRA CADA ELEMENTO DE ARRAY LLAMADO DESDE APP.COMPONENT.HTML-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+    <!--LOGO Y NOMBRE DE LA APP, BOTON DE LOGIN Y LOGOUT-->
+    <ion-title slot="start" class="colorLogo"><ion-icon name="school-sharp"></ion-icon> RegistrAPP Docente</ion-title>
+
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">login</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-in-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">logout</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-out-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+<!--FINAL DE HEADER-->
+
+<br>
+
+<!--INICIO DE CONTENIDO BODY-->
+<ion-content class="ion-padding"><!--CLASE ION-PADDING DE IONIC PARA CENTRAR TODO EL CONTENIDO-->
+
+  <!--TITULO-->
+  <ion-title class="centrarTexto tamanoTitulo"><b>REGISTRO</b></ion-title>
+
+  <br>
+
+  <!--INICIO DE CARD-->
+  <ion-card class="fondoCard">
+    <!--ION CARD HEADER PARA CENTRAR TODO EL CONTENIDO DENTRO DEL CARD-->
+    <ion-card-header>
+      <form [formGroup]="newAlumnoForm" (ngSubmit)="addAlumno()">
+        <!--INICIO DE FORMULARIO REGISTRO USUARIO-->
+        <ion-text class="colorTexto">Ingrese correo electronico</ion-text>
+        <ion-input label="Ingrese correo electronico..." label-placement="floating" fill="outline"
+          formControlName="correo" required>
+        </ion-input>
+
+        <br>
+        <ion-text class="colorTexto">Ingrese nombre</ion-text>
+        <ion-input label="Ingrese Nombre" label-placement="floating" fill="outline" formControlName="nombre" required>
+        </ion-input>
+
+        <br>
+
+        <ion-text class="colorTexto">Ingrese apellido</ion-text>
+        <ion-input label="Ingrese apellido" label-placement="floating" fill="outline" formControlName="apellido"
+          required>
+        </ion-input>
+
+        <br>
+
+        <ion-text class="colorTexto">Ingrese RUT</ion-text>
+        <ion-input label="Ingrese RUT" label-placement="floating" fill="outline" formControlName="rutAlumno" required>
+        </ion-input>
+
+        <br>
+
+        <ion-text class="colorTexto">Ingrese contraseña</ion-text>
+        <ion-input label="Ingrese contraseña de 8 digitos" label-placement="floating" fill="outline" minlength="8"
+          formControlName="contrasena" type="password" required>
+        </ion-input>
+
+        <br>
+
+        <ion-text class="colorTexto">Re-ingrese contraseña</ion-text>
+        <ion-input label="Re-ingrese misma contraseña de 8 digitos" label-placement="floating" fill="outline"
+          minlength="8" formControlName="contrasena2" type="password" required>
+        </ion-input>
+
+        <!--FINAL DE FORMULARIO REGISTRO USUARIO-->
+
+        <br>
+        <!--BOTON PARA REGISTRAR USUARIO-->
+        <ion-button color="secondary" size="small" shape="round"
+          type="submit">Registrar</ion-button><!--COLOR SECONDARY MODIFICADO EN VARIABLES.SCSS-->
+      </form>
+    </ion-card-header>
+  </ion-card>
+  <!--FINAL DE CARD-->
+</ion-content>
+<!--FINAL DE CONTENIDO BODY-->

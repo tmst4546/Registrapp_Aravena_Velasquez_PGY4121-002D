@@ -1,0 +1,53 @@
+<!--INICIO DE HEADER-->
+<ion-header>
+  <ion-toolbar>
+
+    <!--MENU SIDE HAMBURGUESA, MUESTRA CADA ELEMENTO DE ARRAY LLAMADO DESDE APP.COMPONENT.HTML-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+    <!--LOGO Y NOMBRE DE LA APP, BOTON DE LOGIN Y LOGOUT-->
+    <ion-title slot="start" class="colorLogo"><ion-icon name="school-sharp"></ion-icon> RegistrAPP Docente</ion-title>
+
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">login</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-in-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">logout</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-out-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+<!--FINAL DE HEADER-->
+
+<!--INICIO CONTENIDO BODY-->
+<ion-content class="ion-padding"><!--CLASE ION-PADDING DE IONIC PARA CENTRAR TODO EL CONTENIDO-->
+
+  <!--TITULO-->
+  <ion-title class="centrarTexto tamanoTitulo"><b>REGISTRO DE </b></ion-title>
+  <ion-title class="centrarTexto tamanoTitulo"><b>ASISTENCIA</b></ion-title>
+
+  <br><br>
+
+  <ion-card >
+
+    <ion-card-header >
+      <ion-img src="https://miracomohacerlo.com/wp-content/uploads/2016/10/codigo-qr.jpg" type="image"
+      alt="Codigo qr" style="width: 30%; height: 40%;"></ion-img>
+    
+    </ion-card-header>
+    
+  </ion-card>
+
+  
+
+</ion-content>
+<!--FINAL CONTENIDO BODY-->

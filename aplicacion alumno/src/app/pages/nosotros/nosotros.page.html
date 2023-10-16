@@ -1,0 +1,109 @@
+<!--INICIO DE HEADER-->
+<ion-header>
+  <ion-toolbar>
+
+    <!--MENU SIDE HAMBURGUESA, MUESTRA CADA ELEMENTO DE ARRAY LLAMADO DESDE APP.COMPONENT.HTML-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+    <!--LOGO Y NOMBRE DE LA APP, BOTON DE LOGIN Y LOGOUT-->
+    <ion-title slot="start" class="colorLogo"><ion-icon name="school-sharp"></ion-icon> RegistrAPP</ion-title>
+    
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">login</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-in-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">logout</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-out-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+<!--FINAL DE HEADER-->
+
+<br>
+
+<!--INICIO DE CONTENIDO BODY-->
+<ion-content class="ion-padding">
+
+  <!--TITULO-->
+  <ion-title class="centrarTexto tamanoTitulo"><b>ACERCA DE NOSOTROS</b></ion-title>
+  
+  <br>
+
+  <!--INICIO CARD-->
+  <ion-card class="fondoCard">
+    <!--ION CARD HEADER PARA CENTRAR TODO EL CONTENIDO DENTRO DEL CARD-->
+    <ion-card-header>
+      <!--PRIMER PARRAFO DE TEXTO-->
+      <ion-text class="centrarTexto colorTexto">Nosotros somos <ion-text class="colorNombre">Tomas Aravena
+        </ion-text> y <ion-text class="colorNombre">Matias Velásquez</ion-text>,
+        estudiantes de cuarto semestre de la carrera Analista Programador Computacional del Instituto Duoc UC sede
+        Maipú. Débido a la dificultad de registrar asistencia en clases donde afecta tanto al alumno como al docente, haremos
+        un proyecto web para resolver esta problematica.
+      </ion-text>
+    </ion-card-header>
+  </ion-card>
+  <!--FINAL PRIMER CARD-->
+
+  <br>
+
+  <!--PRIMERA IMAGEN DE ALUMNOS CON MASCARILLAS-->
+  <ion-img
+    src="https://www.animalshealth.es/fileuploads/news/estudiantes-veterinaria-mascarilla-evaumesa-de-trabajo-115940480341.jpg"
+    type="image" alt="Mascarillas en las universidades">
+  </ion-img>
+
+  <br>
+
+  <!--INICIO SEGUNDO CARD-->
+  <ion-card class="fondoCard">
+    <!--ION CARD HEADER PARA CENTRAR TODO EL CONTENIDO DENTRO DEL CARD-->
+    <ion-card-header>
+      <!--SEGUNDO PARRAFO DE TEXTO-->
+      <ion-text class="centrarTexto colorTexto">Nuestro proyecto movil llamado <ion-text class="colorNombre">RegistrAPP
+        </ion-text>
+        tendrá los siguientes objetivos: Reducir los tiempos destinados para registrar la asistencia, mejorar el proceso
+        del
+        registro de asistencia y por ultimo motivar a los alumnos a que asistan a clases de manera presencial.
+        La aplicación tendrá las siguientes funcionalidades:
+      </ion-text>
+      <ion-text class="colorTexto">
+        <ion-text class="colorNombre">-</ion-text>Login de usuario(para alumno en la app).<br>
+        <ion-text class="colorNombre">-</ion-text>Login de usuario(para docente en pagina web de escritorio).<br>
+        <ion-text class="colorNombre">-</ion-text>Registro de usuario mediante formulario, ingresando: Nombre, apellido, número celular, correo electronico, 
+        contraseña y repetir contraseña. <br>
+        <ion-text class="colorNombre">-</ion-text>Iniciar proceso de asistencia.<br>
+        <ion-text class="colorNombre">-</ion-text>Mostrar codigo QR desplegandolo en un proyector(para docente en pagina web de escritorio).<br>
+        <ion-text class="colorNombre">-</ion-text>Usar cámara de celular en la aplicación.<br>
+        <ion-text class="colorNombre">-</ion-text>Registro de asistencia escaneando el codigo QR.
+      </ion-text>
+    </ion-card-header>
+  </ion-card>
+  <!--FINAL SEGUNDO CARD-->
+
+  <!--SEGUNDA IMAGEN DE CODIGOS QR-->
+  <ion-img src="https://media.istockphoto.com/vectors/modern-simple-multicolor-qr-code-sign-in-vector-illustration-isolated-vector-id1084595376?s=612x612"
+    type="image" alt="Codigos QR">
+  </ion-img>
+
+</ion-content>
+<!--FINAL CONTENIDO DE BODY-->
+
+<!--INICIO FOOTER-->
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button class="colorRegresar" defaultHref="/inicio" text="Inicio">
+      </ion-back-button>
+    </ion-buttons>  
+  </ion-toolbar>
+</ion-footer>
+<!--FINAL FOOTER-->

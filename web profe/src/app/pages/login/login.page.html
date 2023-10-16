@@ -1,0 +1,76 @@
+<!--INICIO DE HEADER-->
+<ion-header>
+  <ion-toolbar>
+
+    <!--MENU SIDE HAMBURGUESA, MUESTRA CADA ELEMENTO DE ARRAY LLAMADO DESDE APP.COMPONENT.HTML-->
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+    <!--LOGO Y NOMBRE DE LA APP, BOTON DE LOGIN Y LOGOUT-->
+    <ion-title slot="start" class="colorLogo"><ion-icon name="school-sharp"></ion-icon> RegistrAPP</ion-title>
+
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">login</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-in-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+    <ion-button color="secondary" slot="end" size="small" shape="round">
+      <ion-text class="letraLog">logout</ion-text>
+      <a href="/login" slot="end">
+        <ion-icon name="log-out-outline" size="small" class="colorLogin"></ion-icon>
+      </a>
+    </ion-button>
+
+  </ion-toolbar>
+</ion-header>
+<!--FINAL DE HEADER-->
+
+<br>
+
+<!--INICIO CONTENIDO BODY-->
+<ion-content class="ion-padding"><!--CLASE ION-PADDING DE IONIC PARA CENTRAR TODO EL CONTENIDO-->
+
+  <!--TITULO-->
+  <ion-title class="centrarTexto tamanoTitulo"><b>LOGIN</b></ion-title>
+
+  <br>
+
+  <!--INICIO CARD-->
+  <ion-card class="fondoCard">
+    <!--ION CARD HEADER PARA CENTRAR TODO EL CONTENIDO DENTRO DEL CARD-->
+    <ion-card-header>
+      <form [formGroup]="newAlumnoForm" (ngSubmit)="loginAlumno()">
+
+        <!--TEXTO E INPUT PARA CORREO ELECTRONICO-->
+
+        <ion-text class="colorTexto">Correo Electronico</ion-text>
+        <ion-input label="Ingrese correo electronico..." label-placement="floating" fill="outline"
+          helperText="ejemplo: correo@correo.com" type="email" formControlName="correo">
+        </ion-input>
+
+        <br>
+
+        <!--TEXTO E INPUT PARA CONTRASEÑA-->
+        <ion-text class="colorTexto">Contraseña</ion-text>
+        <ion-input label="Ingrese contraseña..." label-placement="floating" fill="outline"
+          helperText="Ingrese contraseña de 8 digitos" type="password" formControlName="contrasena">
+        </ion-input>
+
+        <br>
+
+        <ion-text class="colorOlvido">¿Olvidó su contraseña? <a>Recuperar acá</a></ion-text>
+        <br>
+        <ion-text class="colorOlvido">¿Aún no tienes cuenta? <a href="/registro">Regístrate</a></ion-text>
+        <br><br>
+        <ion-button color="secondary" size="small" shape="round" [disabled]="usuarioLogueado"  type="submit">Ingresar</ion-button>
+
+      </form>
+    </ion-card-header>
+  </ion-card>
+  <!--FIN CARD-->
+
+</ion-content>
+<!--FINAL DE CONTENIDO BODY-->
