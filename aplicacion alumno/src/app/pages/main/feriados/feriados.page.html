@@ -1,0 +1,17 @@
+<app-header backButton="/main/home" [showMenu]="true" title="Feriados"></app-header>
+
+<ion-content>
+  <br>
+  <ion-title class="centrarTexto tamanoTitulo"><b>FERIADOS DEL </b></ion-title>
+  <ion-title class="centrarTexto tamanoTitulo"><b>AÑO</b></ion-title>
+  <br>
+  <ion-card  *ngFor="let n of feriados">
+    <ion-card-header>
+      <ion-card-subtitle class="colorFecha">Fecha: {{ n.date }}</ion-card-subtitle>
+      <ion-card-title class="colorNombre">Titulo: {{ n.title }}</ion-card-title>
+      <p>Tipo: {{ n.type }}</p>
+      <p>Extra: {{ n.extra }}</p>
+    </ion-card-header>
+    
+  </ion-card>
+</ion-content>

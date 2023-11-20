@@ -1,0 +1,40 @@
+ion-content{
+    --background: #00b7ed;
+    --color: white;
+    --padding-top: 15px;
+}
+
+ion-item{
+    font-size: 14px;
+    color: #00b7ed;
+    --background: white;
+
+    ion-icon{
+        color: #00b7ed;
+    }
+
+    &.active{
+        color: #00b7ed;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    ion-color{
+        color: #00b7ed;
+    }
+}
+
+ion-menu{
+    --width: 250px;
+    --min-width: 250px;
+    outline: none;
+}
+
+h3{
+    margin-top: 5px;
+    font-weight: bold; 
+}
+
+.avatar-icon{
+    font-size: 100px;
+}

@@ -1,0 +1,30 @@
+<app-header backButton="/main/home" [showMenu]="true" title="Perfil de alumno"></app-header>
+
+<ion-content class="ion-padding">
+
+  <ion-title class="centrarTexto tamanoTitulo"><b>DATOS DEL ALUMNO</b></ion-title>
+
+  <ion-card class="fondoCard">
+    <ion-card-header>
+      
+      <ion-avatar>
+        <img [src]="user()?.image"/>
+      </ion-avatar>
+      
+
+
+      <ion-button class="photo-btn" (click)="takeImage()" size="small" shape="round">
+        <ion-icon name="camera-outline"></ion-icon>
+      </ion-button>
+
+      <H2 class="centrarTexto colorNombre">{{user().name}} {{user().lastName}}</H2>
+      <div class="centrarTexto colorNombre">Alumno</div>
+      <br>
+      <H2 class="centrarTexto colorNombre">{{user().email}}</H2>
+      <div class="centrarTexto colorNombre">Correo electronico</div>
+
+
+
+    </ion-card-header>
+  </ion-card>
+</ion-content>

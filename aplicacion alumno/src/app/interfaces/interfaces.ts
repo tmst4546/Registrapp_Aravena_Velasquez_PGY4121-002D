@@ -10,9 +10,3 @@ export interface RespuestaTopHeadlines {
     inalienable: boolean;
     extra: string;
   }
-  
-  
-  
-  
-  
-  

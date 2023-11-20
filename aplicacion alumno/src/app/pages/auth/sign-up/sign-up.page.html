@@ -1,0 +1,72 @@
+<app-header backButton="/auth" title="Registro"></app-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+
+      <div style="text-align: center;">
+
+        <app-logo></app-logo>
+
+        <form [formGroup]="form" class="auth-form" (ngSubmit)="submit()" (keypress.enter)="submit()">
+
+          <!--Nombre-->
+          <app-custom-item autocomplete="name" icon="person-outline" [control]="form.controls.name" type="text"
+            label="Nombre"></app-custom-item>
+
+          <div class="validators" *ngIf="form.controls.name.errors && form.controls.name.touched">
+            <div *ngIf="form.controls.name.errors?.['required']">El nombre es obligatorio</div>
+            <div *ngIf="form.controls.name.errors?.['minlenght']">El nombre debe tener al menos 4 caracteres</div>
+          </div>
+
+          <!--Apellido-->
+          <app-custom-item autocomplete="lastName" icon="person-outline" [control]="form.controls.lastName" type="text"
+            label="Apellido"></app-custom-item>
+
+          <div class="validators" *ngIf="form.controls.lastName.errors && form.controls.lastName.touched">
+            <div *ngIf="form.controls.lastName.errors?.['required']">El nombre es obligatorio</div>
+            <div *ngIf="form.controls.lastName.errors?.['minlenght']">El nombre debe tener al menos 4 caracteres</div>
+          </div>
+
+          <!--Foto de perfil-->
+          <ion-button (click)="takeImage()" expand="block" fill="clear" shape="round">
+            Subir Imagen
+          </ion-button>
+
+
+          <!--Email-->
+          <app-custom-item autocomplete="email" icon="mail-outline" [control]="form.controls.email" type="email"
+            label="Correo"></app-custom-item>
+
+          <div class="validators" *ngIf="form.controls.email.errors && form.controls.email.touched">
+            <div *ngIf="form.controls.email.errors?.['required']">El correo es obligatorio</div>
+            <div *ngIf="form.controls.email.errors?.['email']">Ingresar correo valido</div>
+          </div>
+
+          <!--Password-->
+          <app-custom-item [control]="form.controls.password" icon="lock-closed-outline" type="password"
+            label="Contraseña"></app-custom-item>
+
+          <div class="validators" *ngIf="form.controls.password.errors && form.controls.password.touched">
+            <div *ngIf="form.controls.password.errors?.['required']">La contraseña es obligatoria</div>
+          </div>
+
+
+          <ion-button expand="block" class="submit" type="submit" [disabled]="form.invalid">
+            Registrate
+            <ion-icon slot="start" name="person-add-outline"></ion-icon>
+          </ion-button>
+
+        </form>
+
+      </div>
+
+    </ion-card-header>
+  </ion-card>
+
+
+
+
+
+
+</ion-content>

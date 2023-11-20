@@ -1,0 +1,10 @@
+<app-header backButton="/main/home" title="Escanear codigo QR"></app-header>
+
+<ion-content [fullscreen]="true">
+  
+  <ion-button (click)="scan()" expand="block" fill="clear" shape="round">
+    Click para escanear
+  </ion-button>
+  {{code}}
+
+</ion-content>
